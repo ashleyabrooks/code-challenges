@@ -1,7 +1,12 @@
 def get_three_page_path():
     """Input file with user id, page id, and time stamp. 
     Return most common three page path pattern and count of 
-    how many times the pattern occurred."""
+    how many times the most common pattern occurred.
+
+    >>> get_three_page_path()
+    7 [('P5', 'P2', 'P4'), ('P12', 'P9', 'P6'), ('P4', 'P14', 'P10')]
+
+    """
     
     f = open('input2.txt', 'r')
 
@@ -43,4 +48,7 @@ def get_three_page_path():
     print max_count, common_pattern
 
 
-get_three_page_path()
+if __name__ == '__main__':
+    import doctest
+    if doctest.testmod().failed == 0:
+        print "\n*** TEST PASSED. ***\n"
