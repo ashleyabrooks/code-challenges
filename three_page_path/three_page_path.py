@@ -33,7 +33,9 @@ def get_three_page_path():
             else:
                 patterns[pattern] = 1
 
-            pages.pop(0) # slows runtime down to O(n^2) because of pop(0)
+            # slows runtime down to O(n^2) because of pop(0).
+            # could re-write to find pattern by incrementing pages[i: i + 3]
+            pages.pop(0) 
 
     max_count = 0
     common_pattern = []
